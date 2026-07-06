@@ -1,6 +1,5 @@
 // Inheritancelar
 
-//  1. Hayvonlar classi
 class Animal {
   constructor(
     public name: string,
@@ -41,7 +40,6 @@ function animalsDemo(): void {
   }
 }
 
-//  2. Texnika Klassini Yaratish
 
 class Vehicle {
   constructor(
@@ -82,9 +80,6 @@ function vehiclesDemo(): void {
   }
 }
 
-// 2. ENCAPSULATION
-
-//  1. Bank Hisobi
 
 class BankAccount {
   private balance: number;
@@ -134,7 +129,6 @@ function bankAccountDemo(): void {
   console.log(`Yakuniy balans: ${account.getBalance()} so'm`);
 }
 
-// 2. Talabalar Reytingi
 
 class Student {
   private marks: number[] = [];
@@ -186,9 +180,7 @@ function studentsDemo(): void {
   console.log(`Eng yuqori bahoga ega talaba: ${topStudent.name}`);
 }
 
-// 3. ABSTRACTION
 
-// 1. Geometrik Shakllar
 abstract class Shape {
   abstract getArea(): number;
   abstract getPerimeter(): number;
@@ -237,7 +229,6 @@ function shapesDemo(): void {
   }
 }
 
-//  2. Transport Vositalari
 interface Transport {
   move(): void;
   stop(): void;
@@ -273,9 +264,6 @@ function transportDemo(): void {
   }
 }
 
-// 4. POLYMORPHISM
-
-// 1. Xodimlar Klassini Yaratish
 abstract class Employee {
   constructor(public name: string) {}
 
@@ -323,7 +311,6 @@ function employeeDemo(): void {
   }
 }
 
-// 2. Transport Vositalarini Boshqarish
 interface Flyer {
   fly(): void;
 }

@@ -1,6 +1,4 @@
-// Birinchi Topshiriq
 
-// 1.1 CAR CLASS
 class Car {
   model: string;
   year: number;
@@ -26,7 +24,6 @@ car1.displayInfo();
 car1.changeColor("Qora");
 car1.displayInfo();
 
-// 1.2 STUDENT CLASS
 class Student {
   firstName: string;
   lastName: string;
@@ -52,9 +49,6 @@ console.log(student1.getFullName());
 student1.changeGrade(11);
 console.log(`Yangi sinf: ${student1.grade}`);
 
-// Ikkinchi Topshiriq
-
-// 2.1 BANK ACCOUNT CLASS
 class BankAccount {
   private balance: number;
 
@@ -90,7 +84,6 @@ account.deposit(500);
 account.withdraw(2000);
 account.withdraw(300);
 
-// 2.2 USERACCOUNT CLASS
 class UserAccount {
   public username: string;
   private password: string;
@@ -118,7 +111,6 @@ class UserAccount {
   }
 }
 
-// protected metodi
 class AdminUser extends UserAccount {
   checkActivity(): void {
     console.log(`${this.username} faolmi: ${this.isActive()}`);
@@ -131,9 +123,6 @@ user1.changePassword("12345", "newpass1");
 const admin1 = new AdminUser("admin1", "adminpass");
 admin1.checkActivity();
 
-// Uchinch Topshiriq
-
-// 3.1 ANIMAL INTERFACE
 interface Animal {
   name: string;
   age: number;
@@ -173,7 +162,6 @@ const cat1 = new Cat("Murka", 2);
 dog1.speak();
 cat1.speak();
 
-// 3.2 RENTAL SYSTEM
 interface RentalItem {
   id: number;
   name: string;
@@ -240,9 +228,6 @@ carRental.returnItem();
 houseRental.rentItem();
 houseRental.returnItem();
 
-// TO'RTINCHI TOPSHIRIQ
-
-// 4.1 Calculator Abstract Class
 abstract class Calculator {
   abstract add(a: number, b: number): number;
   abstract subtract(a: number, b: number): number;
@@ -327,9 +312,7 @@ const rect1 = new Rectangle(4, 6);
 circle1.displayInfo();
 rect1.displayInfo();
 
-// BESHINCHI TOPSHIRIQ
 
-// 5.1 Counter klassi
 class Counter {
   static count: number = 0;
 
@@ -343,7 +326,6 @@ const c2 = new Counter();
 const c3 = new Counter();
 console.log(`Yaratilgan obyektlar soni: ${Counter.count}`); // 3
 
-//  5.2 Singleton klass
 class Logger {
   private static instance: Logger;
   private logs: string[] = [];
@@ -377,7 +359,7 @@ logger2.log("Foydalanuvchi tizimga kirdi");
 console.log(`Bir xil obyektmi? ${logger1 === logger2}`);
 console.log("Barcha loglar:", logger1.getAllLogs());
 
-// Oltinchi Topshiriq
+
 
 interface IAccountActions {
   deposit(amount: number): void;
@@ -421,7 +403,6 @@ abstract class Account implements IAccountActions {
   abstract getRole(): string;
 }
 
-// AdminAccount
 class AdminAccount extends Account {
   getRole(): string {
     return "Admin";
@@ -447,7 +428,6 @@ class AdminAccount extends Account {
   }
 }
 
-// CustomerAccount
 class CustomerAccount extends Account {
   getRole(): string {
     return "Customer";
@@ -458,7 +438,6 @@ class CustomerAccount extends Account {
   }
 }
 
-// 6.2 ONLINE SHOPPING SYSTEM
 
 class Product {
   name: string;
@@ -507,7 +486,6 @@ class DiscountedProduct extends Product {
   }
 }
 
-//  Har xil mahsulotlar uchun hisob-kitob
 const products: Product[] = [
   new Product("Noutbuk", 8_000_000, "Elektronika"),
   new DiscountedProduct("Telefon", 5_000_000, "Elektronika", 15),
@@ -528,7 +506,6 @@ for (const product of products) {
 
 console.log(`\nJami summa: ${totalSum.toFixed(2)} so'm`);
 
-// 6.3 GAME
 
 abstract class Character {
   name: string;
@@ -584,7 +561,6 @@ class Mage extends Character {
   }
 }
 
-//  Jang qildirish
 function battle(char1: Character, char2: Character): void {
   console.log(`\n=== Jang boshlandi: ${char1.name} VS ${char2.name} ===`);
   let round = 1;
